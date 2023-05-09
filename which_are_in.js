@@ -20,11 +20,17 @@ Arrays are written in "general" notation. See "Your Test Cases" for examples in 
 In Shell bash a1 and a2 are strings. The return is a string where words are separated by commas.
 Beware: In some languages r must be without duplicates.
 */
-
+//MY S:
 function inArray(arr1,arr2){
  return  arr1.filter(w1=>{
     return arr2.some(w2=>{
       return w2.indexOf(w1) !=-1
     }) 
   }).sort()  
+}
+//2nd S: using find and match methods with filter method
+function inArray(array1,array2){
+  return array1
+    .filter(a1 => array2.find(a2 => a2.match(a1)))
+    .sort()
 }
