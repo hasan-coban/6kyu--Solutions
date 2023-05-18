@@ -15,3 +15,5 @@ function findOdd(A) {
   A.sort((a,b)=>a-b);//without this step test returning 0 wouldn't work
   return A.reduce((el,count)=>count-=el,0);
 }
+//2nd:in the best solution on the codewars , bitwise operator is used
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
